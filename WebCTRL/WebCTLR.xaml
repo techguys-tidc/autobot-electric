@@ -1,0 +1,520 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginWebCTLR" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,8845" sap2010:WorkflowViewState.IdRef="LoginWebCTLR_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="WebCTRL" sap:VirtualizedContainerService.HintSize="870,8620" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="Floor_list" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Room_list" />
+      <Variable x:TypeArguments="x:String" Name="Floor">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="Room">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="Report">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="si:FileInfo" Name="Filename" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Report_list" />
+      <Variable x:TypeArguments="x:String" Default="C:\Users\Autobot\Downloads\Autobot" Name="Main_path" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Login Page" sap:VirtualizedContainerService.HintSize="808,8509" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="774,8252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Login Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="712,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Text="Autobot" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/" DesignTimeRectangle="673, 631, 183, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT nameInput'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='nameInput' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='nameInput' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="ff3cfcfe-c022-4de4-b6ce-e0a769c30925" InformativeScreenshot="261a28a9dfcc30b50492cf270f39699b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="25, 631, 634, 21" ElementType="Text" FriendlyName="'Login Name'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='Login Name:' check:innerText='Login Name:' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="712,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Text="P@ssw0rd1122" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/" DesignTimeRectangle="673, 657, 183, 21" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT pass'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='pass' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='pass' type='password' tag='INPUT' class='' aaname='' /&gt;" Guid="a42be928-d8e1-47a5-bb5e-9fba5e5c29ac" InformativeScreenshot="d3370bda26dc19fb79535f90358c4662.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="25, 657, 634, 21" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl tableRow='5' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='DIV' class='' aaname='Password:' check:innerText='Password:' /&gt;" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="712,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/" DesignTimeRectangle="870, 643, 80, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='submit' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='submit' type='submit' tag='INPUT' class='' aaname='Log in' check:text='Log in' /&gt;" Guid="02767602-bdaa-4c9a-8124-69042cb0a3c0" InformativeScreenshot="0577bc76f9f96e619a7ba2537b347560.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:ReadCsvFile DataTable="[Floor_list]" Delimitator="Comma" DisplayName="Get Floor list" FilePath="Floor_list.csv" sap:VirtualizedContainerService.HintSize="712,154" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Floor_list]" DisplayName="For Each Row in Floor Table" sap:VirtualizedContainerService.HintSize="712,7102" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="FloorRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="678,6916" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="FloorFolderExists" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Assign sap:VirtualizedContainerService.HintSize="636,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Floor]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[FloorRow("Floor").ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Floor'" sap:VirtualizedContainerService.HintSize="636,157" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/navpane/treeframe.jsp?wbs=1943272863&amp;ignorePageCount=true" CvElementArea="18, 336, 14, 16" CvType="ArrowButton" DesignTimeRectangle="18, 337, 16, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl class='TreeCtrl-twisty' idx='4' src='/_common/lvl5/skin/graphics/tree/clean_collapsed.png' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl class='TreeCtrl-twisty' type='' src='/_common/lvl5/skin/graphics/tree/clean_collapsed.png' tag='IMG' aaname='' /&gt;" Guid="f79dfe98-6647-4bf3-95d5-2a91bcb8d964" InformativeScreenshot="b7a4bfb55c47462cd16cd17fd42ae79a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArea="55, 338, 127, 13" CvTextArgument="TIDC MTG 8th Floor" CvType="Text" DesignTimeRectangle="34, 336, 149, 16" FriendlyName="'TIDC MTG 8th Floor'" FullSelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl class='TreeCtrl-content' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='5' tag='SPAN' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl class='TreeCtrl-content' type='' aaname='' tag='SPAN' check:innerText='{0}' /&gt;&quot;, Floor)]" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAUCAYAAACecp+8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL5SURBVGhD7ZgNaiMxDIVzxAR6oSEX2DOU5CKlPUgLvcNSKF5Lsj2SLHkmzcz+dEX4SmzL8rP0ZgI9fH5+pCDYkzBZsDthsmB3OpMdDocvofMEQcUxWSrkP0mC63o2z+k8QVAJkwW7s5vJnqcSa3JMl9cc9zLl71N6rvtwbMQ/PKZ3lrvRxbNcBu/X4zBGrHtaCqfrG9v7li4POmasBaDzanypCV+bntoY68nGYyw9FdKF+b26bkwzmS1oPTxpBzTMupBlMiMOC6zmycSykdQ02SwOFfaYTq6WPifxlM5e3tfHdMr7pOmWtdB5bF3VYguTnV+sNeKPmSz/ccEG6E+e48lcHPPowrpxpWitkXofY9SMWtjL1Dcf9p0nL69nMqVLATm9tb7J8xlkUKpvjaF7TTmmzGd8E33BZFjTmru/q9CkaoS1u9LDZu39R0xWLlnMMzLSiFbYfI5sPjQ469B6xLphMnyLWfErwLNYTnU2vy+Ad2bx1HTv7BtNZmrxz9Jj0ubX4bafS/3JczyZC4i+02Tz2vjtMWIubDYNPwdyQ0O1noZjspHeNZSfWqytyoNatcn4g4V7DU0I1Uj0DlHGGdRzPg/urg0r9yw99MJkP3/0oDjvk9d4MhevGbqpo6a1tS1MBoWZCw5FwiJqPY31JqOnnGqDOPehOHV3bYI7TbbuTWaZiJ3vnAN6vp3JeNGXLuUxFzaP4SzMAUUuGrSehmOyhZ9LcZ5g6e0h76vXkG9nsgE8mcvdJlNNcc0waqxeK+aCXLVAbl7HZAtvVV/L32SyJS2WCeWebUxm/F8MvlWjATxph2ce3VQnDi+h5nFOGQILl7V4xdVNpxws/maTZbDZhtEwV6+7QlrV3dkZv89keazONrUwrXp8k8k4a0xWgTFP2gGirWLjZXShZw0N5wJ0WR5rGWRGFBYwz7dyDEyGUFOlllE8ofULUxTzVj27mgwQte/zSq2yRqtNJiZzok1NFvzXhMmC3XFNditWniAATJMFwXZ8pF8h8s9UibcPsgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </uix:NClick>
+                    <ui:PathExists Resource="{x:Null}" DisplayName="Check Path Floor Exists" Exists="[FloorFolderExists]" sap:VirtualizedContainerService.HintSize="636,115" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[Main_path +&quot;\&quot;+Floor]" PathType="Folder" />
+                    <If Condition="[FloorFolderExists]" sap:VirtualizedContainerService.HintSize="636,350" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,168" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_1" Path="[Main_path +&quot;\&quot;+Floor]" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="636,461" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                      <ui:IfElseIf.ConditionBlocks>
+                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                          <ui:IfElseIfBlock BlockType="If" Condition="[Floor=&quot;TIDC MTG 8th Floor&quot;]">
+                            <ui:IfElseIfBlock.Then>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,265" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ReadCsvFile DataTable="[Room_list]" Delimitator="Comma" DisplayName="Get Floor list" FilePath="MTG_8th_Floor_room.csv" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="ReadCsvFile_2" />
+                              </Sequence>
+                            </ui:IfElseIfBlock.Then>
+                          </ui:IfElseIfBlock>
+                        </sc:BindingList>
+                      </ui:IfElseIf.ConditionBlocks>
+                    </ui:IfElseIf>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Room_list]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="636,5463" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="RoomRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="602,5277" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:Boolean" Name="RoomFolderExists" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="560,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[Room]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[RoomRow("Room").ToString]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  Room" sap:VirtualizedContainerService.HintSize="560,157" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/navpane/treeframe.jsp?wbs=1019329749&amp;ignorePageCount=true" DesignTimeRectangle="70, 380, 93, 16" DesignTimeScaleFactor="1" FriendlyName="'MTG 8B Room'" FullSelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl parentid='geoTree_dx' tag='NOBR' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl parentid='geoTree_dx' tag='NOBR' type='' class=' TreeCtrl-text' aaname='' check:innerText='{0}' /&gt;&quot;, Room)]" Guid="1e54326d-80c4-49c1-a842-55be57b75e9a" ImageBase64="" InformativeScreenshot="f120b8c0ddc122ccea3576add7ab4208.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <ui:PathExists Resource="{x:Null}" DisplayName="Check Path Room Exists" Exists="[RoomFolderExists]" sap:VirtualizedContainerService.HintSize="560,115" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room]" PathType="Folder" />
+                            <If Condition="[RoomFolderExists]" sap:VirtualizedContainerService.HintSize="560,350" sap2010:WorkflowViewState.IdRef="If_2">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,168" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_2" Path="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room]" />
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports'" sap:VirtualizedContainerService.HintSize="560,157" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/main.jsp?wbs=-1707372321&amp;operatorlocale=en" DesignTimeRectangle="1245, 130, 22, 35" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl idx='5' parentid='actButtonSpan' src='https://10.8.30.3/_common/lvl5/skin/graphics/actions/actionbutto*' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class=' Action-WidgetTextButton-WidgetImageButton-base Action-WidgetTextButton-WidgetImageButton-writable' parentid='actButtonSpan' src='https://10.8.30.3/_common/lvl5/skin/graphics/actions/actionbutto*' type='' tag='IMG' aaname='' /&gt;" Guid="9d359e98-81ab-4d8b-bffd-a999205f302b" InformativeScreenshot="f6838fbf6118f13fd0a71482f821b9b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="1073, 130, 173, 35" ElementType="Text" FriendlyName="'Reports'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reports' parentid='actButtonSpan' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reports' parentid='actButtonSpan' type='' tag='DIV' class='' check:innerText='Reports' /&gt;" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NClick>
+                            <uix:NHover DisplayName="Hover 'Daily Report'" sap:VirtualizedContainerService.HintSize="560,157" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                              <uix:NHover.Target>
+                                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/category.jsp?loc=en" DesignTimeRectangle="1249, 201, 167, 18" DesignTimeScaleFactor="1" FriendlyName="'Daily Report'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioncategories' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='2' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioncategories' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='2' type='' tag='DIV' class='MenuItem-base            ' aaname='' check:innerText='Daily Report' /&gt;" Guid="001383a1-6258-420a-a63a-9b7a0b46fe06" InformativeScreenshot="104311ab9fb4f10f57764bda7a718999.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                              </uix:NHover.Target>
+                            </uix:NHover>
+                            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[Report_list]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Report_list' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="560,157" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                              <uix:NExtractData.Target>
+                                <uix:TargetAnchorable DesignTimeRectangle="1418, 202, 198, 286" DesignTimeScaleFactor="1" FriendlyName="'BCM-8B-ULC1/DB3/1A BCM-…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioninstances' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='content' tableRow='1' tag='TD' /&gt;" Guid="6d4645ab-46ad-4dff-b560-7e2e1bb17c59" InformativeScreenshot="4e9d67edcff7e787beec87c98a68225a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                              </uix:NExtractData.Target>
+                            </uix:NExtractData>
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Report_list]" DisplayName="For Each Row in Report" sap:VirtualizedContainerService.HintSize="560,3734" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="ReportRow" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,3548" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[Report]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[ReportRow("Report_list").ToString.Trim]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Reports'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_23" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/main.jsp?wbs=-1707372321&amp;operatorlocale=en" DesignTimeRectangle="1245, 130, 22, 35" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl idx='5' parentid='actButtonSpan' src='https://10.8.30.3/_common/lvl5/skin/graphics/actions/actionbutto*' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class=' Action-WidgetTextButton-WidgetImageButton-base Action-WidgetTextButton-WidgetImageButton-writable' parentid='actButtonSpan' src='https://10.8.30.3/_common/lvl5/skin/graphics/actions/actionbutto*' type='' tag='IMG' aaname='' /&gt;" Guid="9d359e98-81ab-4d8b-bffd-a999205f302b" InformativeScreenshot="f6838fbf6118f13fd0a71482f821b9b2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="1073, 130, 173, 35" ElementType="Text" FriendlyName="'Reports'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reports' parentid='actButtonSpan' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Reports' parentid='actButtonSpan' type='' tag='DIV' class='' check:innerText='Reports' /&gt;" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <uix:NHover DisplayName="Hover 'Daily Report'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NHover_2" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NHover.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/category.jsp?loc=en" DesignTimeRectangle="1249, 201, 167, 18" DesignTimeScaleFactor="1" FriendlyName="'Daily Report'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioncategories' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='2' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioncategories' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='2' type='' tag='DIV' class='MenuItem-base            ' aaname='' check:innerText='Daily Report' /&gt;" Guid="001383a1-6258-420a-a63a-9b7a0b46fe06" InformativeScreenshot="104311ab9fb4f10f57764bda7a718999.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NHover.Target>
+                                    </uix:NHover>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Report'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/instance.jsp?loc=en" DesignTimeRectangle="1431, 203, 149, 16" DesignTimeScaleFactor="1" FriendlyName="'BCM-8B-ULC1/DB3/1A'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioninstances' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='NOBR' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioninstances' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl type='' tag='NOBR' class='' aaname=' {0}' /&gt;&quot;, Report)]" Guid="e1009041-297b-4848-81fd-dcea772191c7" ImageBase64="" InformativeScreenshot="1c683a46715f1ee8ac7f6a0342a9adba.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="1426, 202, 194, 18" FriendlyName="'BCM-8B-ULC1/DB3/1A'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioninstances' tableRow='1' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='0' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='actioninstances' tag='IFRAME' /&gt;&lt;webctrl id='container' tag='TABLE' /&gt;&lt;webctrl id='0' type='' tag='DIV' class='MenuItem-base' aaname='' check:innerText='{0}' /&gt;&quot;, Report)]" ImageBase64="" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Design'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_24" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/facetbar.jsp?wbs=2059280935" DesignTimeRectangle="445, 167, 199, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Design'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='facetContent' tableRow='2' tag='IFRAME' /&gt;&lt;webctrl aaname='Design' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='facetContent' tag='IFRAME' /&gt;&lt;webctrl aaname='Design' tag='DIV' type='' class='' check:innerText='Design' /&gt;" Guid="180fa053-3ce6-4fea-9041-ae4168b965ef" InformativeScreenshot="5e56ab3d0ee6754edf2b18905988479c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Rows'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_25" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~relpath/?as=action-set&amp;a=reports&amp;c=mtg_daily_report&amp;i=bcm_8b_ulc1_db3_1a&amp;wbs=-463423882&amp;pageCount=33&amp;lcount=32" DesignTimeRectangle="243, 374, 16, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG rowsExpandableClosed'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl class='Section-expandable-header' idx='2' parentid='paddedDiv' tag='TABLE' /&gt;&lt;webctrl id='rowsExpandableClosed' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl class='Section-expandable-header' parentid='paddedDiv' tag='TABLE' /&gt;&lt;webctrl id='rowsExpandableClosed' type='' tag='IMG' class='' aaname='' /&gt;" Guid="47e9b144-70a0-48c0-a88c-adfee7d08e9d" InformativeScreenshot="6e29657c2c98a554f957f180e8a4ad27.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="266, 374, 37, 16" FriendlyName="'Rows'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl class='Section-expandable-header' idx='2' parentid='paddedDiv' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='NOBR' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl class='Section-expandable-header' parentid='paddedDiv' tag='TABLE' /&gt;&lt;webctrl type='' tag='NOBR' class='' aaname='Rows' check:innerText='Rows' /&gt;" SearchSteps="FuzzySelector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~abspath/%230100008b?as=action-set&amp;a=reports&amp;c=mtg_daily_report&amp;i=bcm_8b_ulc1_db3_1b&amp;f=design&amp;wbs=1586579691&amp;pageCount=44&amp;lcount=43" DesignTimeRectangle="415, 413, 13, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='I' parentid='rowsExpandableInnerContent' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='I' parentid='rowsExpandableInnerContent' tag='SPAN' type='' class=' ControlLightDropList-WidgetLightDropList-WidgetImageButton-base' /&gt;" Guid="824f369c-f816-4a61-8635-dcd049217ebe" ImageBase64="" InformativeScreenshot="d20a13397f428f64a45a3147a72a04e1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8B Room' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Day'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_27" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~relpath/?as=action-set&amp;a=reports&amp;c=mtg_daily_report&amp;i=pdu_03b&amp;wbs=1586579691&amp;pageCount=47&amp;lcount=46" DesignTimeRectangle="331, 431, 82, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Day'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='Day' parentid='paddedDiv' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='Day' parentid='paddedDiv' tag='DIV' type='' class='  ControlLightDropList-WidgetLightDropList-rowactive' check:innerText='Day' /&gt;" Guid="c56f894b-92bf-49a5-859d-4b528ac18cb1" InformativeScreenshot="e7934bb30ab86c189d9befd4fffe389a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_28" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~relpath/?as=action-set&amp;a=reports&amp;c=mtg_daily_report&amp;i=pdu_03b&amp;wbs=1586579691&amp;pageCount=47&amp;lcount=46" DesignTimeRectangle="517, 413, 13, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='I' idx='2' parentid='rowsExpandableInnerContent' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='I' type='' parentid='rowsExpandableInnerContent' tag='SPAN' class=' ControlLightDropList-WidgetLightDropList-WidgetImageButton-base' /&gt;" Guid="d8e4ed0f-e49f-4c4a-9194-92b37f095fe0" ImageBase64="" InformativeScreenshot="9d8509cde1cfd2085d0ba98ef3d5cd15.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.PointOffset>
+                                            <uix:PointOffset Position="TopLeft" X="5" Y="7" />
+                                          </uix:TargetAnchorable.PointOffset>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Yesterday'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_29" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~relpath/?as=action-set&amp;a=reports&amp;c=mtg_daily_report&amp;i=pdu_03b&amp;wbs=1586579691&amp;pageCount=47&amp;lcount=46" DesignTimeRectangle="433, 431, 82, 14" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Yesterday'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='Yesterday' parentid='paddedDiv' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl aaname='Yesterday' parentid='paddedDiv' tag='DIV' type='' class='      ControlLightDropList-WidgetLightDropList-rowactive' check:innerText='Yesterday' /&gt;" Guid="18e517fa-1bba-4741-b8a3-1eda43cb68d0" InformativeScreenshot="29c0847f994725b0acf315f9d581a8f9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Run'" sap:VirtualizedContainerService.HintSize="484,157" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~relpath/?as=action-set&amp;a=reports&amp;c=mtg_daily_report&amp;i=pdu_03b&amp;wbs=1586579691&amp;pageCount=47&amp;lcount=46" DesignTimeRectangle="246, 321, 46, 22" DesignTimeScaleFactor="1" FriendlyName="'Run'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;span' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class=' ControlTextButton-WidgetTextButton-text   ' tag='SPAN' aaname='' check:innerText='Run' /&gt;" Guid="de5061af-cfff-4ec3-b8e3-8086c7ac0dbf" InformativeScreenshot="9bef66edc391040f8720bc94868b94ec.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <ui:GetLastDownloadedFile FileResource="{x:Null}" IgnoreFiles="{x:Null}" Timeout="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[Main_path]" File="[Filename]" sap:VirtualizedContainerService.HintSize="484,524" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2">
+                                      <ui:GetLastDownloadedFile.Body>
+                                        <ActivityAction>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'CSV'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_31" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://10.8.30.3/~dbid/5651?a=reports&amp;c=mtg_daily_report&amp;i=pdu_03b&amp;f=view&amp;command=run&amp;wbs=1586579691&amp;pageCount=48&amp;lcount=47" DesignTimeRectangle="630, 203, 46, 22" DesignTimeScaleFactor="1" FriendlyName="'CSV'" FullSelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;span' idx='5' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='actionContent' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' aaname='' class=' ControlTextButton-WidgetTextButton-text  ' tag='SPAN' check:innerText='CSV' /&gt;" Guid="6b36c3da-2ed1-4e05-9866-1929142b4eb4" InformativeScreenshot="f680afdc1cef5b54dfde7ce2955b40e9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center/TIDC MTG 8th Floor/MTG 8E Room' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:GetLastDownloadedFile.Body>
+                                    </ui:GetLastDownloadedFile>
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: chrome.exe" sap:VirtualizedContainerService.HintSize="484,605" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="2c64f3ab-3367-45a9-882d-3639540f57b5" Version="V2">
+                                      <uix:NApplicationCard.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,314" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="388,199" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][d(alt)][k(f4)][u(alt)][u(hk)]" Version="V3">
+                                              <uix:NKeyboardShortcuts.Target>
+                                                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ไม่ระบุชื่อ - Google Chrome' /&gt;" Guid="3d46de64-f2bb-4edd-8a6f-cb84e6d48c09" SearchSteps="Selector" />
+                                              </uix:NKeyboardShortcuts.Target>
+                                            </uix:NKeyboardShortcuts>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </uix:NApplicationCard.Body>
+                                      <uix:NApplicationCard.TargetApp>
+                                        <uix:TargetApp Area="32, 0, 1066, 888" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFxSURBVDhPY6A64OTmlvT08T8Qk5D6NT454x8Ig9ggMZAcVBl2oK2rXxiXmPYLqOl/fHL63/CouOchEbGPoAb9B8mB1ECVowKQBEhhXFL6H31D41omJiZmkLiEpLQDxEA4/odhCMhpcYnpv0Ga+fkF1KHCDKbmVj1hUXHP0AwAuwTFOyD/gSRANkOFGERExUzRNSJjkB6oUgaGmPiUbyA/w5wNAhKSUvYBweFXQTg2IfU7ugGggIUqZWAACvwDBRiUiwHsnVxXIGuOTUz9CdIDlYYYgKwAFBbBYdF3DYxM6kGu4uTkEjc2teiwtnWYo6CoHAqyDMUAiBcQBiBjFVX1OKgyMAAZCPIuihdggYgNW9rYz4QqAwNQQIPEUQIRFo3IGq1sHWZraOlkS0pJO0GVMYCiGOQ9jGgEAVhCghkgr6gUDJUCOxtkM0gzSA2+1FgES8pxSWm/w6Jin0ICLP0vWAxfUoYBkNNA/iMrM5EOGBgAbhv5+a23N0oAAAAASUVORK5CYII=" InformativeScreenshot="67da1e96642c818147ad4fa95d168bd5.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ไม่ระบุชื่อ - Google Chrome' /&gt;" Title="ไม่ระบุชื่อ - Google Chrome" />
+                                      </uix:NApplicationCard.TargetApp>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NApplicationCard>
+                                    <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room + &quot;\&quot; +String.Join(&quot;&quot;,Report.Split(System.IO.Path.GetInvalidFileNameChars)) + &quot;.csv&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="484,159" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[Filename.ToString]" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                            </ui:ForEachRow>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:StartProcess Arguments="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Start Process" FileName="upload.bat" sap:VirtualizedContainerService.HintSize="712,88" sap2010:WorkflowViewState.IdRef="StartProcess_2" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAbxSURBVFhHpZZtTFvnFcf9pWuypg3tmjVrGmLeEoMBG2PaJBDb2CkvyQJpvlXtFqRpmrSXT5s67a3pl0nTptXkhdAklEsCbZdG3VsrVe3AhhBCs3ZDi5ZAo21OA5hAOztNmrXhXj9n//M8j415SUe7I/30P+fh+vzPufcasC03YgF3zkzQ0zITrDLAyPshb3ImVEXTQS/NBDn3RmeClcZ0qHIvX6s/9v/HVIPbfjVU1com2kxcra2k6VovqBQM14sIVBpTAbddt/nsoTb2htlUGgWUWcYQ9dWAR0wFOPcgV8r1VMCj8AOfZ59uufzgyWES00a6sUfm8ww0cTZiuPZViLi/Qp1xrohNbV7m3ZiurXChUSzbIIO/QjDKUBlpE4r73BmdhE5ucys4V/X/HoI3h1EsvYFSjTaa9Kmm8W3aSDXPMJGmxkWTNS4BBaoer3ZhCMfSQ/Azh1FMGWU1z5ipxnIA1hq3kDUbaENlJHMxLmul49XljFDqii35LZnwucMZE4XI3khvo41Uzg1lzc1l7aIrOGO0KV3ZupAycWVLWVjbqnC/tNve/h3/nAmboqk2I7mNNpn57jfoxss9ZMYnKR3i5rskZl4la2QXWecqGcGaYn3LQ5JzHpx5BM5kTcNZ70PlS3uMbUYzjYUq1Fb6dknFxDKvr6YbJ3u0JVE8Kah/bBaYdGkqpU8xzNSLZL3jJ/OtChgxbgzhxjDQYbeqoajVXXAbu3M8LzxGzL4fBjO3io1Z39tSRuN1W+nWpTFp8JeYSd8yPqKqZ65R1T4N8qbwdYqOzsprxM0xst6ugZmLDZUOc85aDi3HEOVJGsG74H5hd4u7ZzdVANb+Jq80ZfCsBOv133TLxkein5AXhhmezso1R3ENh4h3K7PhMk1pljJOMXumpMXm7m42ALm6m4S7p1k8+Ys6ury5lN7b7BTMxGP1siFvV/l0UuLROse1eefv4C5xpC7sFdZZJ5lnS8hagtRwiWFzdTdHXScwwIkmTTO9useLIZwUe8RJN177nWy289kPqeJnyTlglNF0rutvdt6QnxFTJ4R5thhm2TgwlINS0NRQ8Yit/HhTsvz4LkpT1rWLth9spL/7yij2cIm4dWmUxuIWudF8MYnbkKTJJF7MTyZguBGGmiEJMSZInS1K2MqMr8JUImSu659/u5piVcWCN4lcnCXXTxNLA7P5dYLKoRH9QlpDRWSeKSSLQW4NaZV1gbCVdu6kUpiWGjuF1C6lj7Q30vkap2zSd/EWlaHpQtgoW7PP+zA0h3WmAEb5wjoDhgowTD7O5uABks7OHUKxk6BAqvjeUz5hxidoMpGi0p/8+zMxiscmProAkzwyB/Ogdgxhl7XKN3CdsJU8v+OvJR2NpNhBqGXuZH2+UQz2n5SbtHRcJycaO38MWD+Ful9dk59JTZ+CGRvlCnMwlyzJBrBecG4Oro/aHB0NRvGxRpqjQQ7gONYgOP/6a0/JZn/+1yyVwLwYKP1A5nP13HkvHhmH9fYWMk+vBw/B9CHBqnOyWE+vM2yOow0tIGPIyPpovQCsdPy8+ioe6rtJjh99QA6YSF0Izg/1/kdee228E4brYLYO2z6I/EGYK6y0Dqzba7MbgZziI/XJTUfqKRsH69E6wXi79ojR9/8hG//pwi0K/jJJm2CYzdeOfUjn/qlevInEu5QYLCFz4CuatTBdK9JqnX5A5hTNUX+WNz1X37rpuTraqJH5kTqRroHwGntE1/nfSgOOi5OWHIaZwEuaDr6m849bsN1aGD+QwWLt/7JUa2CNsPrXGNKcw9HeYN/Y/igxRVrTeRaisH27CPQ8Sa+MvkEX9R3hGL9+lYy/vUJP/P4H5O/wwWiNYkBr//0ytwbuFzIH2H7+f0ZFbaHWosPbKU1hG+ujxKaFhyWkNCT4ZxldwKk/FMHkS8pU6n3YVipZyFlTA/ct/k/ZHg7kFBwOxQraVOOCQyEqBKx8JpXP2ubX2Tze9TDM7hVm9F4YAlaAM605wormxLTl4sAQ9oK2YCzdMP9gkApA/qGgkHCu66XOL7+JZxxdjQHuAathuBqGUNSa2KJbvzB4iPwDtTHZ9EAt5R2sFQznafJY8XNWmR8I0ve7y8mM3I1N71EKrOgqmK4SnM9G7ob5ik83TwcPkbe/NgbIfiAg8vYHpMochvb9Kk9T076VLr+B5xxZxabQu+ZhRe6Kfbxc8+zAIM/YW2F+W/wYxi86Xs4ns28ljL4oMSMrBNdmBPStDGe+758n+G7khv3GhrCfNrT6Re6zPsF5btgn6+q2zTBZobmTzF4QuTNp9q5s/fj1z7H17QKD5Kz/9bYWDNCFAaLQJKCTp/A7PXJHItX7hZFU7wpjtu+OluVvbLP9F5lmWAkTeM7rAAAAAElFTkSuQmCC" InformativeScreenshot="95d7dcf7c73ab638f08d5f45cd45932e.jpg" Selector="&lt;html app='chrome.exe' title='Login Page' /&gt;" Title="Login Page" Url="https://10.8.30.3/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
