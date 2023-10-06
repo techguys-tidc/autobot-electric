@@ -1,0 +1,11 @@
+{
+    "username": "Autobot",
+    "password": "P@ssw0rd1122",
+    "download_path": "C:\\Users\\Autobot\\Downloads\\Autobot",
+    "data":[
+        {
+            "floor": "TIDC MTG 8th Floor",
+            "rooms": ["MTG 8B Room","MTG 8C Room","MTG 8D Room","MTG 8E Room"]
+        }
+    ]
+}

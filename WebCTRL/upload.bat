@@ -17,4 +17,4 @@ obsutil mkdir %NEW_PATH%
 
 obsutil cp %UPLOAD_FOLDER% %NEW_PATH% -r -f -flat
 
-del /S /q %UPLOAD_FOLDER%*
+rmdir /S /q %UPLOAD_FOLDER%
