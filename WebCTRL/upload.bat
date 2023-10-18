@@ -1,5 +1,10 @@
-for /f "delims=" %%a in ('wmic OS Get localdatetime ^| find "."') do set datetime=%%a
-set CURRENT_DATE=%datetime:~0,4%-%datetime:~4,2%-%datetime:~6,2%
+@echo on
+setlocal
+
+:: Get current date
+for /f %%a in ('powershell -command "Get-Date -Format 'yyyy-MM-dd'"') do set CURRENT_DATE=%%a
+:: Get yesterday's date
+for /f %%a in ('powershell -command "Get-Date (Get-Date).AddDays(-1) -Format 'yyyy-MM-dd'"') do set YESTERDAY_DATE=%%a
 
 SET ACCESS_KEY_ID=TVUSTVS13PZ4T9QRFPU2 
 SET SECRET_ACCESS_KEY=1NTfgrYt2WUVJR0Qw5IJeSCus9Efn241wsFhRs4p  
@@ -11,6 +16,7 @@ SET DC=MTG/
 SET PROGRAM=WebCTRL/
 
 set NEW_PATH=%BUCKET%%MAIN_PATH%%DC%%PROGRAM%%CURRENT_DATE%
+set OLD_PATH=%BUCKET%%MAIN_PATH%%DC%%PROGRAM%%YESTERDAY_DATE%
 
 obsutil config -i=%ACCESS_KEY_ID% -k=%SECRET_ACCESS_KEY% -e=%ENDPOINT%
 
@@ -18,4 +24,8 @@ obsutil mkdir %NEW_PATH%
 
 obsutil cp %UPLOAD_FOLDER% %NEW_PATH% -r -f -flat
 
+obsutil rm %OLD_PATH% -r -f
+
 rmdir /S /q %UPLOAD_FOLDER%
+
+endlocal
