@@ -6,10 +6,11 @@ SET SECRET_ACCESS_KEY=1NTfgrYt2WUVJR0Qw5IJeSCus9Efn241wsFhRs4p
 SET ENDPOINT=https://obs.ap-southeast-214.clouds.trueidc.com
 SET BUCKET=obs://demo-electric-automation-billing/
 SET UPLOAD_FOLDER=C:\Users\Autobot\Downloads\Autobot\
+SET MAIN_PATH=schedule/
 SET DC=MTG/
 SET PROGRAM=WebCTRL/
 
-set NEW_PATH=%BUCKET%%DC%%PROGRAM%%CURRENT_DATE%
+set NEW_PATH=%BUCKET%%MAIN_PATH%%DC%%PROGRAM%%CURRENT_DATE%
 
 obsutil config -i=%ACCESS_KEY_ID% -k=%SECRET_ACCESS_KEY% -e=%ENDPOINT%
 
