@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoginWebCTLR" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="860,10143.42857142857" sap2010:WorkflowViewState.IdRef="LoginWebCTLR_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginWebCTLR" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1102,11184" sap2010:WorkflowViewState.IdRef="LoginWebCTLR_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -133,7 +133,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WebCTRL" sap:VirtualizedContainerService.HintSize="869.7142857142857,10078.285714285714" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WebCTRL" sap:VirtualizedContainerService.HintSize="1112,11039" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Floor_list" />
       <Variable x:TypeArguments="sd:DataTable" Name="Room_list" />
@@ -165,16 +165,17 @@
       <Variable x:TypeArguments="x:String" Name="Password" />
       <Variable x:TypeArguments="x:Boolean" Name="MainPathExists" />
       <Variable x:TypeArguments="x:Object" Name="arrData" />
+      <Variable x:TypeArguments="x:Boolean" Name="validCertPage" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="808,145.71428571428572" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Autobot start&quot;]" />
-    <ui:ReadTextFile File="{x:Null}" Content="[strConfigText]" DisplayName="Read  Config File" FileName="config.json" sap:VirtualizedContainerService.HintSize="808,82.28571428571429" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="808,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObjectConfig]" JsonString="[strConfigText]" />
-    <ui:MultipleAssign DisplayName="Assign variable" sap:VirtualizedContainerService.HintSize="808,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Autobot start&quot;]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[strConfigText]" DisplayName="Read  Config File" FileName="config.json" sap:VirtualizedContainerService.HintSize="1050,80" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="1050,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObjectConfig]" JsonString="[strConfigText]" />
+    <ui:MultipleAssign DisplayName="Assign variable" sap:VirtualizedContainerService.HintSize="1050,178" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -204,8 +205,8 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:PathExists Resource="{x:Null}" DisplayName="Check Main Path Exists" Exists="[MainPathExists]" sap:VirtualizedContainerService.HintSize="808,120" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[Main_path]" PathType="Folder" />
-    <If Condition="[MainPathExists]" sap:VirtualizedContainerService.HintSize="808,353.14285714285717" sap2010:WorkflowViewState.IdRef="If_3">
+    <ui:PathExists Resource="{x:Null}" DisplayName="Check Main Path Exists" Exists="[MainPathExists]" sap:VirtualizedContainerService.HintSize="1050,115" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[Main_path]" PathType="Folder" />
+    <If Condition="[MainPathExists]" sap:VirtualizedContainerService.HintSize="1050,350" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_29">
           <sap:WorkflowViewStateService.ViewState>
@@ -216,29 +217,76 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="375.42857142857144,169.14285714285714" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence sap:VirtualizedContainerService.HintSize="376,168" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334.2857142857143,82.28571428571429" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Main_path]" />
+          <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[Main_path]" />
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Login Page" sap:VirtualizedContainerService.HintSize="808,8786.857142857143" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Login Page" sap:VirtualizedContainerService.HintSize="1050,9764" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" IsCVEnabled="False" ScopeGuid="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="773.7142857142857,8566.857142857143" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,9547" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Login Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="712,222.85714285714286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Text="[Username]" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Certificate page invalid'" sap:VirtualizedContainerService.HintSize="954,686" sap2010:WorkflowViewState.IdRef="NCheckState_2" Mode="WaitDisappear" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Timeout="5" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target disappears" sap:VirtualizedContainerService.HintSize="450,469" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ขั้นสูง'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_47" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="464, 624, 65, 35" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'ขั้นสูง'" FullSelectorArgument="&lt;ctrl name='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว' role='document' /&gt;&lt;ctrl name='ขั้นสูง' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว' role='document' /&gt;&lt;ctrl name='ขั้นสูง' role='push button' automationid='' check:text='ขั้นสูง' /&gt;" Guid="4313db0b-9bf6-4ad3-b20c-ccf717089918" InformativeScreenshot="09a3f2e73bd6bc0fb16844e5ca981201.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'ไปยัง 10.8.30.3'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_48" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="464, 786, 165, 17" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'ไปยัง 10.8.30.3'" FullSelectorArgument="&lt;ctrl name='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว' role='document' /&gt;&lt;ctrl name='ไปยัง 10.8.30.3 (ไม่ปลอดภัย)' role='link' /&gt;" FuzzySelectorArgument="&lt;ctrl name='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว' role='document' /&gt;&lt;ctrl name='ไปยัง 10.8.30.3 (ไม่ปลอดภัย)' role='link' automationid='' check:text='ไปยัง 10.8.30.3 (ไม่ปลอดภัย)' /&gt;" Guid="3b0214a9-7656-4db0-a979-56e0225249eb" InformativeScreenshot="b7a63f09ee4285c4acfdef705d4112fe.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 8, 1512, 904" DesignTimeScaleFactor="1" FriendlyName="'Intermediate D3D Window'" FullSelectorArgument="&lt;wnd cls='Intermediate D3D Window' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Intermediate D3D Window' /&gt;" Guid="6a3e5c73-a2ea-45cd-ac5c-8195df4305d5" InformativeScreenshot="fc073ac1af8970c91efa0f8696e446d9.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='ข้อผิดพลาดเกี่ยวกับความเป็นส่วนตัว - Google Chrome' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <If Condition="[validCertPage]" sap:VirtualizedContainerService.HintSize="954,262" sap2010:WorkflowViewState.IdRef="If_9">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_43" />
+              </If.Else>
+            </If>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Login Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Text="[Username]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://10.8.30.3/" DesignTimeRectangle="673, 631, 183, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT nameInput'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='nameInput' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='nameInput' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="ff3cfcfe-c022-4de4-b6ce-e0a769c30925" InformativeScreenshot="261a28a9dfcc30b50492cf270f39699b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -249,7 +297,7 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="712,222.85714285714286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Text="[Password]" Version="V3">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Text="[Password]" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://10.8.30.3/" DesignTimeRectangle="673, 657, 183, 21" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT pass'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='pass' tableRow='5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='pass' type='password' tag='INPUT' class='' aaname='' /&gt;" Guid="a42be928-d8e1-47a5-bb5e-9fba5e5c29ac" InformativeScreenshot="d3370bda26dc19fb79535f90358c4662.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -260,18 +308,18 @@
                 </uix:TargetAnchorable>
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="712,159.42857142857142" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="954,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://10.8.30.3/" DesignTimeRectangle="870, 643, 80, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='submit' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='submit' type='submit' tag='INPUT' class='' aaname='Log in' check:text='Log in' /&gt;" Guid="02767602-bdaa-4c9a-8124-69042cb0a3c0" InformativeScreenshot="0577bc76f9f96e619a7ba2537b347560.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login Page' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="712,7416" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CType(jsonObjectConfig(&quot;data&quot;),JArray)]">
+            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="954,7380" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CType(jsonObjectConfig(&quot;data&quot;),JArray)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="njl:JToken">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="njl:JToken" Name="FloorRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="676,7225.714285714285" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="677,7194" sap2010:WorkflowViewState.IdRef="Sequence_31">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:Boolean" Name="FloorFolderExists" />
                     </Sequence.Variables>
@@ -280,7 +328,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="634.8571428571429,85.14285714285714" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign sap:VirtualizedContainerService.HintSize="635,82" sap2010:WorkflowViewState.IdRef="Assign_6">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[Floor]</OutArgument>
                       </Assign.To>
@@ -288,7 +336,7 @@
                         <InArgument x:TypeArguments="x:String">[FloorRow("floor").ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Floor'" sap:VirtualizedContainerService.HintSize="634.8571428571429,159.42857142857142" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Floor'" sap:VirtualizedContainerService.HintSize="635,157" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/navpane/treeframe.jsp?wbs=1943272863&amp;ignorePageCount=true" CvElementArea="18, 336, 14, 16" CvType="ArrowButton" DesignTimeRectangle="18, 337, 16, 16" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl class='TreeCtrl-twisty' idx='4' src='/_common/lvl5/skin/graphics/tree/clean_collapsed.png' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl class='TreeCtrl-twisty' type='' src='/_common/lvl5/skin/graphics/tree/clean_collapsed.png' tag='IMG' aaname='' /&gt;" Guid="f79dfe98-6647-4bf3-95d5-2a91bcb8d964" InformativeScreenshot="b7a4bfb55c47462cd16cd17fd42ae79a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -305,8 +353,8 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <ui:PathExists Resource="{x:Null}" DisplayName="Check Path Floor Exists" Exists="[FloorFolderExists]" sap:VirtualizedContainerService.HintSize="634.8571428571429,120" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[Main_path +&quot;\&quot;+Floor]" PathType="Folder" />
-                    <If Condition="[FloorFolderExists]" sap:VirtualizedContainerService.HintSize="634.8571428571429,353.14285714285717" sap2010:WorkflowViewState.IdRef="If_4">
+                    <ui:PathExists Resource="{x:Null}" DisplayName="Check Path Floor Exists" Exists="[FloorFolderExists]" sap:VirtualizedContainerService.HintSize="635,115" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[Main_path +&quot;\&quot;+Floor]" PathType="Folder" />
+                    <If Condition="[FloorFolderExists]" sap:VirtualizedContainerService.HintSize="635,350" sap2010:WorkflowViewState.IdRef="If_4">
                       <If.Then>
                         <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_32">
                           <sap:WorkflowViewStateService.ViewState>
@@ -317,23 +365,23 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="375.42857142857144,169.14285714285714" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,168" sap2010:WorkflowViewState.IdRef="Sequence_33">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334.2857142857143,82.28571428571429" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[Main_path +&quot;\&quot;+Floor]" />
+                          <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_4" Path="[Main_path +&quot;\&quot;+Floor]" />
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="634.8571428571429,6261.142857142857" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[FloorRow(&quot;rooms&quot;).ToArray]">
+                    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="635,6242" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[FloorRow(&quot;rooms&quot;).ToArray]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="njl:JToken">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="njl:JToken" Name="RoomRow" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="600.5714285714286,6070.857142857143" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="601,6056" sap2010:WorkflowViewState.IdRef="Sequence_34">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="x:Boolean" Name="RoomFolderExists" />
                             </Sequence.Variables>
@@ -342,7 +390,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign sap:VirtualizedContainerService.HintSize="559.4285714285714,85.14285714285714" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign sap:VirtualizedContainerService.HintSize="559,82" sap2010:WorkflowViewState.IdRef="Assign_8">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[Room]</OutArgument>
                               </Assign.To>
@@ -350,7 +398,7 @@
                                 <InArgument x:TypeArguments="x:String">[RoomRow.ToString]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  Room" sap:VirtualizedContainerService.HintSize="559.4285714285714,159.42857142857142" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click  Room" sap:VirtualizedContainerService.HintSize="559,157" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a2531904-acc9-4fcb-9ed3-d457616c8826" Version="V3">
                               <uix:NClick.Target>
                                 <uix:TargetAnchorable BrowserURL="https://10.8.30.3/_common/lvl5/navpane/treeframe.jsp?wbs=1019329749&amp;ignorePageCount=true" DesignTimeRectangle="70, 380, 93, 16" DesignTimeScaleFactor="1" FriendlyName="'MTG 8B Room'" FullSelectorArgument="&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl parentid='geoTree_dx' tag='NOBR' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl id='navTableFrame' tag='IFRAME' /&gt;&lt;webctrl id='navContent' tag='IFRAME' /&gt;&lt;webctrl parentid='geoTree_dx' tag='NOBR' type='' class=' TreeCtrl-text' aaname='' check:innerText='{0}' /&gt;&quot;, RoomRow)]" Guid="1e54326d-80c4-49c1-a842-55be57b75e9a" ImageBase64="" InformativeScreenshot="f120b8c0ddc122ccea3576add7ab4208.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='WebCTRL Premium Server - /True Internet Data Center' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
@@ -361,8 +409,8 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </uix:NClick>
-                            <ui:PathExists Resource="{x:Null}" DisplayName="Check Path Room Exists" Exists="[RoomFolderExists]" sap:VirtualizedContainerService.HintSize="559.4285714285714,120" sap2010:WorkflowViewState.IdRef="PathExists_5" Path="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room]" PathType="Folder" />
-                            <If Condition="[RoomFolderExists]" sap:VirtualizedContainerService.HintSize="559.4285714285714,353.14285714285717" sap2010:WorkflowViewState.IdRef="If_5">
+                            <ui:PathExists Resource="{x:Null}" DisplayName="Check Path Room Exists" Exists="[RoomFolderExists]" sap:VirtualizedContainerService.HintSize="559,115" sap2010:WorkflowViewState.IdRef="PathExists_5" Path="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room]" PathType="Folder" />
+                            <If Condition="[RoomFolderExists]" sap:VirtualizedContainerService.HintSize="559,350" sap2010:WorkflowViewState.IdRef="If_5">
                               <If.Then>
                                 <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -373,13 +421,13 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence sap:VirtualizedContainerService.HintSize="375.42857142857144,169.14285714285714" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                <Sequence sap:VirtualizedContainerService.HintSize="376,168" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334.2857142857143,82.28571428571429" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room]" />
+                                  <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder" sap:VirtualizedContainerService.HintSize="334,80" sap2010:WorkflowViewState.IdRef="CreateDirectory_5" Path="[Main_path + &quot;\&quot;+ Floor + &quot;\&quot; + Room]" />
                                 </Sequence>
                               </If.Else>
                             </If>

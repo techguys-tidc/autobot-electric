@@ -20,6 +20,7 @@
       "Path": "WebCTLR.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "validCertPage&Sequence_1",
         "RoomFolderExists&Sequence_34",
         "FloorFolderExists&Sequence_31",
         "arrData&Sequence_1",
